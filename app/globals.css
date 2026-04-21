@@ -58,6 +58,12 @@ select {
   padding-inline: 0.05rem;
 }
 
+@media (max-width: 47.99rem) {
+  .public-header.is-collapsed-on-mobile {
+    display: none;
+  }
+}
+
 .brand-lockup {
   display: grid;
   justify-items: start;

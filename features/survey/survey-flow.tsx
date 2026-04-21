@@ -12,11 +12,12 @@ import type { SurveyFieldName, SurveyFormData } from "@/lib/domain/types";
 
 interface SurveyFlowProps {
   tracking: Partial<SurveyFormData>;
+  started: boolean;
+  onStart: () => void;
 }
 
-export function SurveyFlow({ tracking }: SurveyFlowProps) {
+export function SurveyFlow({ tracking, started, onStart }: SurveyFlowProps) {
   const router = useRouter();
-  const [started, setStarted] = useState(false);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [formData, setFormData] = useState<SurveyFormData>(() =>
     normalizeTrackingValues(createEmptySurveyFormData(), tracking)
@@ -143,7 +144,7 @@ export function SurveyFlow({ tracking }: SurveyFlowProps) {
           <span>Una pregunta por pantalla</span>
           <span>Optimizado para celular</span>
         </div>
-        <button type="button" className="primary-button" onClick={() => setStarted(true)}>
+        <button type="button" className="primary-button" onClick={onStart}>
           Comenzar
         </button>
       </section>

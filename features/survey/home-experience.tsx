@@ -15,7 +15,18 @@ export function HomeExperience({ tracking }: HomeExperienceProps) {
   const [started, setStarted] = useState(false);
 
   return (
-    <main className="public-page">
+    <main className={`public-page${started ? " has-mobile-fixed-header" : ""}`}>
+      {started ? (
+        <div className="mobile-fixed-brand" aria-label="Metodo Dacovich">
+          <Image
+            src={metodoDacovichLogo}
+            alt="Metodo Dacovich"
+            className="mobile-fixed-brand-logo"
+            priority
+          />
+        </div>
+      ) : null}
+
       <section className={`public-header${started ? " is-collapsed-on-mobile" : ""}`}>
         <div className="brand-lockup">
           <Image

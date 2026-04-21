@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://formulario.metododacovich.com";
-const ogImageUrl = `${appUrl.replace(/\/$/, "")}/opengraph-image`;
-const twitterImageUrl = `${appUrl.replace(/\/$/, "")}/twitter-image`;
+const ogImageUrl = `${appUrl.replace(/\/$/, "")}/og-card.png`;
+const twitterImageUrl = `${appUrl.replace(/\/$/, "")}/og-card.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(appUrl),

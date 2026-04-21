@@ -62,6 +62,35 @@ select {
   .public-header.is-collapsed-on-mobile {
     display: none;
   }
+
+  .public-page.has-mobile-fixed-header {
+    padding-top: 5.75rem;
+  }
+
+  .mobile-fixed-brand {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    width: min(100%, 56rem);
+    transform: translateX(-50%);
+    padding: 0.95rem 1.25rem 0.85rem;
+    background: linear-gradient(
+      180deg,
+      rgba(248, 246, 241, 0.96) 0%,
+      rgba(248, 246, 241, 0.88) 74%,
+      rgba(248, 246, 241, 0) 100%
+    );
+    backdrop-filter: blur(10px);
+  }
+
+  .mobile-fixed-brand-logo {
+    width: auto;
+    height: 28px;
+    object-fit: contain;
+  }
 }
 
 .brand-lockup {
